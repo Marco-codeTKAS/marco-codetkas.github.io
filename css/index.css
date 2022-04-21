@@ -1,0 +1,55 @@
+@import './headder.css';
+@import './aboutMe.css';
+@import './socialMedia.css';
+@import './jobs.css';
+@import './experience.css';
+@import './studies.css';
+@import './footer.css';
+:root{
+    --color1: #20609c;
+    --color2: #5883AC;
+    --color3:  #318FE8;
+    --color4: #164169;
+    --color5: #F0F1F2;
+}
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family:Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+@keyframes slide{
+    0%{
+        width: 60px;        
+        background-color: transparent;
+        /* box-shadow: 0 0 12px 1px rgb(29, 27, 27); */
+    }
+    20%{
+        transform: scale(0.97);
+    }
+    100%{
+        width: 240px;
+        background-color: var(--color5);
+        /* box-shadow: 0 0 12px 1px rgb(29, 27, 27); */
+    }
+}
+@keyframes revslide{
+    from{
+        width: 240px;        
+        background-color: #aae2e2;
+        /* box-shadow: 0 0 12px 1px rgb(29, 27, 27); */
+    }to{
+        width: 60px;   
+        transform: scale(0.95); 
+        background-color: transparent;
+        /* box-shadow: 0 0 12px 1px rgb(29, 27, 27); */
+    }
+    
+}
+

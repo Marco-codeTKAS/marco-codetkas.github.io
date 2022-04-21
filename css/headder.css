@@ -1,0 +1,75 @@
+#logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    width: min-content;
+    /* background-color: #aae2e2; */
+    align-items: center; 
+    box-sizing: content-box;
+    border-radius: 5px;
+    z-index: 7;
+}
+.act-animacion{
+    animation: revslide 0.5s linear ;
+}
+#logo:hover{
+    animation: slide 0.3s linear forwards;
+    overflow: hidden;
+}
+#logo .logo-name{
+    overflow: hidden;   
+    font-size: 20px;
+    z-index: 3; 
+}
+#logo img{
+    border-radius: 50%;
+    height: 60px;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    max-height: 100px;
+    background-color: #466c9094;
+    box-sizing: content-box;
+    justify-content: center;
+    align-items: center;
+}
+.nav-top{
+    display: flex;
+    position: fixed;
+    width: 80%;
+    transition: width 0.3s;
+}
+.navscroll{
+    display: flex;
+    position: fixed;
+    transition: width 0.3s max-height 2s;
+    height: 60px;
+    width: 100%;
+    background-color:#798faa ;
+    top: 0;
+    z-index: 6;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    column-gap: 120px;
+}
+nav ul a{
+    
+    padding: 10px 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+nav ul a:hover{
+    background-color: var(--color1);
+    color: var(--color5);
+}
