@@ -1,6 +1,6 @@
 
 let observerMenu = new IntersectionObserver(AnimaMenu, options={threshold:1,});
-let observerHabilities = new IntersectionObserver(AnimaHabilities, options={threshold:0.4,});
+let observerHabilities = new IntersectionObserver(AnimaHabilities, options={threshold:0.19,});
 const habilitiesImage= document.querySelectorAll(".habiliti-img");
 const selecHeadder = document.querySelector("#headder");
 observerMenu.observe(selecHeadder);
@@ -39,15 +39,34 @@ function AnimaMenu(entries) {
   }
 }
 function AnimaHabilities(entries) {   
-    const iconsJobs = document.getElementById("icons").children;
-      if(entries[0].isIntersecting){
-        habilitiesImage[0].classList.add("img-animation");
-        habilitiesImage[1].classList.add("img-animation");    
+  const iconsJobs = document.getElementById("icons").children;
+  console.log(entries[0]);
+  if (entries[0].isIntersecting) {
+        
+    habilitiesImage[0].classList.remove("img-animation-out");
+    habilitiesImage[0].classList.add("img-animation-in");
+        
+    habilitiesImage[0].classList.remove("img-animation-out");
+    habilitiesImage[0].classList.add("img-animation-in");
         for (let index = 0; index < iconsJobs.length; index++) {
-          iconsJobs[index].classList.add("img-animation");
+          iconsJobs[index].classList.remove("img-animation-out");
+          iconsJobs[index].classList.add("img-animation-in");
         }
         cont = 1;
         window.event;
+  } else {
+    
+    // habilitiesImage[0].classList.remove("img-animation-in");
+    habilitiesImage[0].classList.toggle("img-animation-out");
+
+    // habilitiesImage[1].classList.remove("img-animation-in");
+    habilitiesImage[1].classList.toggle("img-animation-out");
+         
+         for (let index = 0; index < iconsJobs.length; index++) {           
+          //  iconsJobs[index].classList.remove("img-animation-in");
+           iconsJobs[index].classList.toggle("img-animation-out");
+    } 
+    
       }
 }
 

@@ -46,8 +46,11 @@
     opacity: 0;
     transform: translateX(200px);
 }
-.img-animation{
+.img-animation-in{
     animation: imgslide 1s ease forwards;
+}
+.img-animation-out{
+    animation: imgslideout 1s ease forwards;
 }
 .left, .right{
     color: aliceblue;
@@ -71,6 +74,7 @@
     height: 100px;
     transform: translateX(200px);
     opacity: 0;
+    transition: opaciti 1s transform 1s;
 }
 
 .html-icon{
@@ -99,5 +103,15 @@
     100%{
         transform: translateX(0);
         opacity: 1;
+    }
+}
+@keyframes imgslideout {
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50px);
+        opacity: 0;
     }
 }
