@@ -1,9 +1,43 @@
 footer{        
     width: 100%;
-    height: 100px;
+    height: 150px;
     background-color: rgb(26, 26, 39);
     color: var(--color5);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.fsocial-media {
+    /* background-color: aqua; */
+    width: 40%;
+    height: 100%;
+    padding: 3em 0 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+
+}
+i{
+    font-style: normal;
+}
+.ficon-label{
+    text-decoration: none;
+    font-weight:500;
+    color: white;
+    font-size: 0.8em;
+    font-style: none;
+    
+}
+.ficon-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.footer-icon{
+    max-width: 1em;
+    max-height: 1em;
 }

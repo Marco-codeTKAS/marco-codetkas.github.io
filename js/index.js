@@ -46,8 +46,8 @@ function AnimaHabilities(entries) {
     habilitiesImage[0].classList.remove("img-animation-out");
     habilitiesImage[0].classList.add("img-animation-in");
         
-    habilitiesImage[0].classList.remove("img-animation-out");
-    habilitiesImage[0].classList.add("img-animation-in");
+    habilitiesImage[1].classList.remove("img-animation-out");
+    habilitiesImage[1].classList.add("img-animation-in");
         for (let index = 0; index < iconsJobs.length; index++) {
           iconsJobs[index].classList.remove("img-animation-out");
           iconsJobs[index].classList.add("img-animation-in");

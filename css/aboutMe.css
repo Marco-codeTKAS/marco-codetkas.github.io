@@ -9,6 +9,14 @@
 .I-am div{
     margin: 20px 0;
 }
+.nombre-svg{
+    width:912px;
+    height:48px;
+}
+.txtweb{
+    width:372px;
+    height:46px;
+}
 .imagen{
     width: 180px;
     height: 180px;

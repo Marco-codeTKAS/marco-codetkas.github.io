@@ -7,6 +7,7 @@
     <title>           
         Personal Site</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./img/myAvatar.svg" >
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
@@ -15,6 +16,10 @@
     <header id="headder">
         <div id="logo"><img src="./img/myAvatar.svg" id="logo-img"></div>
         <nav id="nav" class="nav-top">
+            <div id="hamb-menu" class="hamburger">
+                <input id="hamburger" type="checkbox">
+                <label class="label-menu" for="hamburger"> ☰ </label>
+            </div>
             <ul>
                 <a href=""><li class="item-menu">Home</li></a>
                 <a href=""><li class="item-menu">About-Me</li></a>
@@ -33,7 +38,7 @@
             <img src="" alt="">
         </div>
         <div class="marcotxt">
-            <svg width="912" height="48" viewBox="0 0 912 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="nombre-svg" viewBox="0 0 912 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8.03125 1.5L22.9062 38.625L37.7812 1.5H45.5625V47H39.5625V29.2812L40.125 10.1562L25.1875 47H20.5938L5.6875 10.25L6.28125 29.2812V47H0.28125V1.5H8.03125Z" fill="black"/>
                 <path d="M76.125 47C75.7917 46.3333 75.5208 45.1458 75.3125 43.4375C72.625 46.2292 69.4167 47.625 65.6875 47.625C62.3542 47.625 59.6146 46.6875 57.4688 44.8125C55.3438 42.9167 54.2812 40.5208 54.2812 37.625C54.2812 34.1042 55.6146 31.375 58.2812 29.4375C60.9688 27.4792 64.7396 26.5 69.5938 26.5H75.2188V23.8438C75.2188 21.8229 74.6146 20.2188 73.4062 19.0312C72.1979 17.8229 70.4167 17.2188 68.0625 17.2188C66 17.2188 64.2708 17.7396 62.875 18.7812C61.4792 19.8229 60.7812 21.0833 60.7812 22.5625H54.9688C54.9688 20.875 55.5625 19.25 56.75 17.6875C57.9583 16.1042 59.5833 14.8542 61.625 13.9375C63.6875 13.0208 65.9479 12.5625 68.4062 12.5625C72.3021 12.5625 75.3542 13.5417 77.5625 15.5C79.7708 17.4375 80.9167 20.1146 81 23.5312V39.0938C81 42.1979 81.3958 44.6667 82.1875 46.5V47H76.125ZM66.5312 42.5938C68.3438 42.5938 70.0625 42.125 71.6875 41.1875C73.3125 40.25 74.4896 39.0312 75.2188 37.5312V30.5938H70.6875C63.6042 30.5938 60.0625 32.6667 60.0625 36.8125C60.0625 38.625 60.6667 40.0417 61.875 41.0625C63.0833 42.0833 64.6354 42.5938 66.5312 42.5938Z" fill="black"/>
                 <path d="M106.406 18.375C105.531 18.2292 104.583 18.1562 103.562 18.1562C99.7708 18.1562 97.1979 19.7708 95.8438 23V47H90.0625V13.1875H95.6875L95.7812 17.0938C97.6771 14.0729 100.365 12.5625 103.844 12.5625C104.969 12.5625 105.823 12.7083 106.406 13V18.375Z" fill="black"/>
@@ -64,7 +69,7 @@
                 </svg>
         </div>        
         <div class="txtweb">
-            <svg class="txtdev" width="372" height="46" viewBox="0 0 372 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="txtdev"  viewBox="0 0 372 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.3203 25.2422L10.9766 29.7422L11.9375 25.6875L18.6875 1.875H22.4844L29.0703 25.6875L30.0078 29.8125L30.7344 25.2188L36.0312 1.875H40.5547L32.2812 36H28.1797L21.1484 11.1328L20.6094 8.53125L20.0703 11.1328L12.7812 36H8.67969L0.429688 1.875H4.92969L10.3203 25.2422Z" fill="#EEEEEE" fill-opacity="0.01"/>
                 <path d="M54.6641 36.4688C51.2266 36.4688 48.4297 35.3438 46.2734 33.0938C44.1172 30.8281 43.0391 27.8047 43.0391 24.0234V23.2266C43.0391 20.7109 43.5156 18.4688 44.4688 16.5C45.4375 14.5156 46.7812 12.9688 48.5 11.8594C50.2344 10.7344 52.1094 10.1719 54.125 10.1719C57.4219 10.1719 59.9844 11.2578 61.8125 13.4297C63.6406 15.6016 64.5547 18.7109 64.5547 22.7578V24.5625H47.375C47.4375 27.0625 48.1641 29.0859 49.5547 30.6328C50.9609 32.1641 52.7422 32.9297 54.8984 32.9297C56.4297 32.9297 57.7266 32.6172 58.7891 31.9922C59.8516 31.3672 60.7812 30.5391 61.5781 29.5078L64.2266 31.5703C62.1016 34.8359 58.9141 36.4688 54.6641 36.4688ZM54.125 13.7344C52.375 13.7344 50.9062 14.375 49.7188 15.6562C48.5312 16.9219 47.7969 18.7031 47.5156 21H60.2188V20.6719C60.0938 18.4688 59.5 16.7656 58.4375 15.5625C57.375 14.3438 55.9375 13.7344 54.125 13.7344Z" fill="#EEEEEE" fill-opacity="0.01"/>
                 <path d="M91.0625 23.6016C91.0625 27.4766 90.1719 30.5938 88.3906 32.9531C86.6094 35.2969 84.2188 36.4688 81.2188 36.4688C78.0156 36.4688 75.5391 35.3359 73.7891 33.0703L73.5781 36H69.5938V0H73.9297V13.4297C75.6797 11.2578 78.0938 10.1719 81.1719 10.1719C84.25 10.1719 86.6641 11.3359 88.4141 13.6641C90.1797 15.9922 91.0625 19.1797 91.0625 23.2266V23.6016ZM86.7266 23.1094C86.7266 20.1562 86.1562 17.875 85.0156 16.2656C83.875 14.6562 82.2344 13.8516 80.0938 13.8516C77.2344 13.8516 75.1797 15.1797 73.9297 17.8359V28.8047C75.2578 31.4609 77.3281 32.7891 80.1406 32.7891C82.2188 32.7891 83.8359 31.9844 84.9922 30.375C86.1484 28.7656 86.7266 26.3438 86.7266 23.1094Z" fill="#EEEEEE" fill-opacity="0.01"/>
@@ -181,8 +186,12 @@
 
     <footer>
         <div class="marca">&#174 Marco Antonio Dev </div>
-        <div class="fsocial-media"></div>
-        
+        <div class="fsocial-media">
+            <i class="ficon-container"><img src="./img/facebook.svg" alt="facebook" class="footer-icon"> <a href="https://www.instagram.com/marcoramirez2544/" target="_blank" class="ficon-label" > Marco Ramirez </a></i>
+            <i class="ficon-container"><img class="footer-icon" src="./img/instagram.svg" alt="facebook"> <a class="ficon-label" href="https://www.facebook.com/marco.tkas13/" target="_blank"> Marco Ramirez </a></i>
+            <i class="ficon-container"><img class="footer-icon" src="./img/github.svg" alt="facebook"> <a class="ficon-label" href="https://github.com/Marco-codeTKAS" target="_blank"> Marco-codeTKAS </a></i>
+            <i class="ficon-container"><img class="footer-icon" src="./img/linkedin.svg" alt="facebook"> <a class="ficon-label" href="https://www.linkedin.com/in/marco-antonio-renter%C3%ADa-ram%C3%ADrez-96032317a/" target="_blank"> Marco Antonio Ramirez </a></i>
+        </div>        
     </footer>
 
     <script src="./js/index.js"></script>

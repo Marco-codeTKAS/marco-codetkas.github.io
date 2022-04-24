@@ -23,6 +23,9 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
 }
+#hamb-menu{
+    display: none;
+}
 
 @keyframes slide{
     0%{
@@ -53,3 +56,52 @@ body{
     
 }
 
+@media (max-width:480px) {
+    nav ul{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 60%;
+        height: 100vh;
+        transition: all 1s;
+        background-color: var(--color1);
+        top: 60px;
+    }
+    .label-menu {
+        box-sizing: border-box;
+        display: inline-block;        
+        border-radius: 5px;
+        border: 0.5px solid rgb(124, 121, 153);
+        padding: 10px;        
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+        user-select: none;
+        /* box-shadow: 2px 2px 4px 1px #778897; */
+    }
+    #hamb-menu{        
+        display: flex;
+        left: 100px;
+        padding-left: 80px;
+    }
+    #hamburger {
+        display: none;
+    }
+    #hamburger:checked~ul{
+        transform: translateX(-300px);
+        background-color: #5883AC;
+    }
+    #hamburger:checked ~ label {
+        
+        background: var(--color1);
+    }
+    
+    
+    .nombre-svg{
+        max-width: 60%;
+    }
+    .txtweb{
+        max-width: 40%;
+    }
+}
