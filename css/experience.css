@@ -58,12 +58,15 @@
     /* transform: rotateY(0deg); */
 }
 .reverse{
-    background-color: var(--color4);
+    background-color: var(--color1);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color5);
+    color: var(--color3);
     transform: rotateY(180deg);        
+}
+.reverse a:visited{
+    color: var(--color2);
 }
 
 figure > img{
