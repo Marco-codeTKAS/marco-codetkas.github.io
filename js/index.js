@@ -40,9 +40,8 @@ function AnimaMenu(entries) {
 }
 function AnimaHabilities(entries) {   
   const iconsJobs = document.getElementById("icons").children;
-  console.log(entries[0]);
-  if (entries[0].isIntersecting) {
-        
+  if (entries[0].isIntersecting && window.screen.width >= 480) {
+    console.log(window.screen)
     habilitiesImage[0].classList.remove("img-animation-out");
     habilitiesImage[0].classList.add("img-animation-in");
         
@@ -55,16 +54,16 @@ function AnimaHabilities(entries) {
         cont = 1;
         window.event;
   } else {
-    
+    console.log(window.screen.width)
     // habilitiesImage[0].classList.remove("img-animation-in");
-    habilitiesImage[0].classList.toggle("img-animation-out");
+    habilitiesImage[0].classList.replace("img-animation-in","img-animation-out");
 
     // habilitiesImage[1].classList.remove("img-animation-in");
-    habilitiesImage[1].classList.toggle("img-animation-out");
+    habilitiesImage[1].classList.replace("img-animation-in","img-animation-out");
          
          for (let index = 0; index < iconsJobs.length; index++) {           
           //  iconsJobs[index].classList.remove("img-animation-in");
-           iconsJobs[index].classList.toggle("img-animation-out");
+           iconsJobs[index].classList.replace("img-animation-in","img-animation-out");
     } 
     
       }

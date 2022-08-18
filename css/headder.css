@@ -31,8 +31,9 @@ header{
     width: 100%;
     height: 80px;
     max-height: 100px;
-    background-color: #466c9094;
-    box-sizing: content-box;
+    background-color: #3e445618;
+    box-sizing: content-box;    
+    /* font-weight: bold; */
     justify-content: center;
     align-items: center;
 }
@@ -48,7 +49,7 @@ header{
     transition: width 0.3s max-height 2s;
     height: 60px;
     width: 100%;
-    background-color:#798faa ;
+    background-color:#3e4456a1 ;
     top: 0;
     z-index: 6;
 }
@@ -67,7 +68,7 @@ nav ul a{
     text-decoration: none;
     color: black;
     font-size: 24px;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
 }
 nav ul a:hover{
     background-color: var(--color1);

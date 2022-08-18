@@ -27,12 +27,13 @@
     margin: 20px 0;
 }
 .txtdev path{
-    fill: #000000;
-    stroke: #000000;
+    fill: #2a3047;
+    stroke: #2a3047;
     stroke-dasharray: 268px;
     stroke-dashoffset: -268px;
     animation: strDO 4s ease forwards 1s;
 }
+
 @keyframes strDO{
    
     70%{
@@ -42,7 +43,7 @@
     100%{
         stroke-dashoffset:0px;
         fill-opacity: 1;
-        fill: #000000;
+        fill: #2a3047;
     }
 }
 
