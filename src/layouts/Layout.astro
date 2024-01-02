@@ -1,4 +1,5 @@
 ---
+import Navegacion from "../components/Navegacion.astro"
 interface Props {
 	title: string;
 }
@@ -12,40 +13,45 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class=" bg-gray-50  flex w-100%  justify-center">
+		<Navegacion></Navegacion>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	:root{
+  --accent-light: #00519C;
+  --accent-regular: #0AC5B9;
+	--gray-disable:#000000;
+	
+	--gradient-text:#0AC5B9, rgba(166, 202, 255, 0.007);
+	--gradient-light:linear-gradient(to right,  #1264b1,#0AC5B9);
+	
+  --gradient-stop-1: var(--accent-light);
+  --gradient-stop-2: var(--accent-regular);
+
+}
+
+strong {
+	color: var(--accent-light);
+	font-weight: 500;
+}
+
+
+.TextColor{
+	background-image: linear-gradient(to right, #00519C, #0AC5B9);
+  color: transparent;
+  -webkit-background-clip: text; /* Para navegadores basados en WebKit (Chrome, Safari) */
+  background-clip: text;
+}
+
+
+
 </style>

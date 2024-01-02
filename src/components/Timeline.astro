@@ -1,0 +1,116 @@
+---
+import Card from "../components/Card.astro";
+import { proyectos } from "../utils/Prouectos";
+import UndrawBilling from "../assets/icons/UndrawBilling.astro" 
+---
+
+<div class="flex flex-col sm:timeline relative  justify-center   ">
+  {
+    proyectos.map((proyecto, index) => (
+      <div class="flex">
+        <div
+          class:list={["sm:container py-2  relative w-[100%] sm:w-[50%] sm:left-item left-0 px-0 sm:px-10", {'sm:right-item sm:left-item   sm:left-[50%]':index%2 !== 0} ]}
+        >
+          <div class="content shadow-md bg-white rounded-md relative">
+            <h2 class="bg-gradient-to-r rounded-sm from-[#00519C] to-[#0AC5B9] text-white text-lg py-1 px-5">
+              {proyecto.title}
+            </h2>
+            <div role="contentinfo" class="flex rounded-b-md conten-info gap-2 relative py-2 px-3">
+              <div class="flex flex-col gap-y-4 items-center basis-2/4 flex-shrink ">
+                <img
+                  src={proyecto.image.src}
+                  class="max-w-[100%] object-left-top h-fit  object-contain "
+                  alt="Imagen de ejemplo extraida del proyecto Facturacion.iloxtelecom.com"
+                />
+                <a href={proyecto.urlProyect} target="_blank" class:list={["relative inline-flex items-center justify-center p-[1px] mb-2 me-1 overflow-hidden text-[10px] font-normal text-gray-500 rounded-[3px] group  group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-50 dark:focus:ring-cyan-800", {'disable bg-slate-500': proyecto.urlProyect === '#'}, {' bg-gradient-to-br from-[#00519C] to-[#0AC5B9]': proyecto.urlProyect !== '#'}]}>
+                  <span class="relative tracking-wide	 px-4 py-1.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-sm group-hover:bg-opacity-0">
+                    { proyecto.urlProyect === '#' ? 'En desarrollo': 'Ver mas'}
+                  </span>
+                </a>
+              </div>
+              <div class="basis-3/4">
+                <time
+                  datetime="2022-09"
+                  class="text-xs text-slate-400 text-right w-[100%]"
+                >
+                  {proyecto.date}        
+                </time>
+                <p class=" whitespace-pre-line text-[12px] font-normal leading-relaxed">
+                  {proyecto.body}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+
+</div>
+<style>
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-image: linear-gradient(
+      to bottom,
+      var(--accent-light),
+      var(--accent-regular)
+    );
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  .disable{
+    color: grey;
+    cursor:not-allowed;
+    pointer-events: none;
+    background-color: grey !important;
+  }
+  .conten-info{
+    background-image: linear-gradient(to bottom left, #ffffff , #f6fcff, #f6fcff);
+  }
+  .container::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: -16px;
+    background-color: white;
+    background-image: url("../assets/icons/iconTimeline.svg");
+    background-size: cover;
+    border: 3px solid var(--accent-light);
+    top: 10px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .left-item::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 8px;
+    width: 0;
+    z-index: 1;
+    right: 21px;
+    border: medium solid rgb(122, 110, 110);
+    border-width: 18px 0 18px 20px;
+    border-color: transparent transparent transparent var(--accent-regular);
+  }
+  .right-item::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 8px;
+    width: 0;
+    z-index: 1;
+    left: 21px;
+    border: medium solid white;
+    border-width: 18px 20px 18px 0  ;
+    border-color: transparent var(--accent-light);
+  }
+  .right-item::after {
+    left: -16px;
+  }
+</style>

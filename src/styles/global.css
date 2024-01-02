@@ -1,0 +1,8 @@
+:root{
+  --accent-light: #c561f6;
+  --accent-regular: #7611a6;
+  --accent-dark: #1c0056;
+  --gradient-stop-1: var(--accent-light);
+  --gradient-stop-2: var(--accent-regular);
+  --gradient-stop-3: var(--accent-dark);
+}
