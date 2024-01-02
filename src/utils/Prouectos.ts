@@ -43,7 +43,7 @@ export const proyectos: Array<Proyectos> = [
     technologies: ["Quasar framework ", "VueJS", ".NetCore6"],
     image:{
       src:"src/assets/images/Facturacion.png",
-      alt:"Imagen de ejemplo extraida del proyecto Facturacion.iloxtelecom.com"
+      alt:"Imagen de ejemplo extraída del proyecto Facturación.iloxtelecom.com"
     },
     date:"Septiembre-2022",
     urlProyect:"https://facturacion.iloxtelecom.com/adminfacturacion/Portal"
