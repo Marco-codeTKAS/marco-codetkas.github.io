@@ -32,7 +32,7 @@ import UndrawBilling from "../assets/icons/UndrawBilling.astro";
                   href={proyecto.urlProyect}
                   target="_blank"
                   class:list={[
-                    "relative inline-flex items-center justify-center p-[1px] mb-2 me-1 overflow-hidden text-[10px] font-normal text-gray-500 rounded-[3px] group  group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-50 dark:focus:ring-cyan-800",
+                    "relative inline-flex items-center justify-center p-[1px] mb-2 me-1 overflow-hidden text-[10px] font-normal text-gray-500 rounded-[3px] group  group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white  focus:ring-4 focus:outline-none focus:ring-blue-50 ",
                     { "disable bg-slate-500": proyecto.urlProyect === "#" },
                     {
                       " bg-gradient-to-br from-[#00519C] to-[#0AC5B9]":
@@ -40,7 +40,7 @@ import UndrawBilling from "../assets/icons/UndrawBilling.astro";
                     },
                   ]}
                 >
-                  <span class="relative tracking-wide	 px-4 py-1.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-sm group-hover:bg-opacity-0">
+                  <span class="relative tracking-wide	 px-4 py-1.5 transition-all ease-in duration-75 bg-white  rounded-sm group-hover:bg-opacity-0">
                     {proyecto.urlProyect === "#" ? "En desarrollo" : "Ver mas"}
                   </span>
                 </a>
