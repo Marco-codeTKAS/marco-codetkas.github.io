@@ -3,6 +3,7 @@ import Icon from "./Icon.astro";
 import Imagen from "./Imagen.astro";
 import { Image } from "astro:assets";
 import DropDownLogo from "../assets/icons/downloadIcon.svg"
+
 ---
 
 <section class="flex flex-wrap justify-around items-center pt-[120px] pb-[80px] gap-6 sm:gap-0 sm:py-[120px] ">
@@ -16,18 +17,17 @@ import DropDownLogo from "../assets/icons/downloadIcon.svg"
     </h2>
     <div class="flex mt-6 gap-[40px] ">
       <a
-        href="../assets/Doc/CV Marco Antonio Renteria Ramirez.pdf"
+        href="https://drive.google.com/file/d/1yqJzwNBrpY11U_yD2Tg2ONr84Vmc5zCI/view?usp=drive_link"
         download
         target="_blank"
         id="downloadCV"
         class="flex button gap-3 px-3 py-2 text-sm shadow-sm font-normal text-white bg-gradient-to-r from-[#00519C] to-[#0AC5B9] rounded-[3px]"
       >
         <span> Descargar mi CV</span>
-        <object
-          data="../assets/icons/downloadIcon.svg"
-          type="image/svg+xml"
+        <img
+          src={DropDownLogo.src}
           class=""
-          width="15px"></object>
+          width="15px"></img>
       </a>
       <script>
         // const btn = document.getElementById("downloadCV");

@@ -6,8 +6,12 @@ interface Proyectos {
   date:string,
   urlProyect:string
 }
+import facturacionImg from "../assets/images/Facturacion.png"
+import mailingImg from "../assets/images/Mailing.png"
+import noImage from "../assets/images/Facturacion.png"
+
 interface Image {
-  src:string,
+  src:ImageMetadata,
   alt:string,
 }
 export const proyectos: Array<Proyectos> = [
@@ -17,7 +21,7 @@ export const proyectos: Array<Proyectos> = [
     Este sistema me dio la oportunidad de aprender la ultima version de VueJs. Utilizando y aprendiendo conceptos como los composable.`,
     technologies: ["Quasar framework ", "Vue3", ".NetCore6"],
     image:{
-      src:"../assets/images/Facturacion.png",
+      src:facturacionImg,
       alt:""
     },
     date:"Octubre-2023",
@@ -30,7 +34,7 @@ export const proyectos: Array<Proyectos> = [
     `,
     technologies: ["Quasar framework ", "VueJS", ".NetCore6"],
     image:{
-      src:"../assets/images/Mailing.png",
+      src:mailingImg,
       alt:""
     },
     date:"Enero-2023",
@@ -42,7 +46,7 @@ export const proyectos: Array<Proyectos> = [
     Este sistema proporciona a los empleados de la empresa una para llevar a cabo diversas operaciones financieras.`,
     technologies: ["Quasar framework ", "VueJS", ".NetCore6"],
     image:{
-      src:"../assets/images/Facturacion.png",
+      src:facturacionImg,
       alt:"Imagen de ejemplo extraída del proyecto Facturación.iloxtelecom.com"
     },
     date:"Septiembre-2022",
