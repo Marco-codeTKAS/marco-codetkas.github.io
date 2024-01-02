@@ -1,6 +1,8 @@
 ---
 import Icon from "./Icon.astro";
 import Imagen from "./Imagen.astro";
+import { Image } from "astro:assets";
+import DropDownLogo from "../assets/icons/downloadIcon.svg"
 ---
 
 <section class="flex flex-wrap justify-around items-center pt-[120px] pb-[80px] gap-6 sm:gap-0 sm:py-[120px] ">
@@ -14,7 +16,7 @@ import Imagen from "./Imagen.astro";
     </h2>
     <div class="flex mt-6 gap-[40px] ">
       <a
-        href="src/assets/Doc/CV Marco Antonio Renteria Ramirez.pdf"
+        href="../assets/Doc/CV Marco Antonio Renteria Ramirez.pdf"
         download
         target="_blank"
         id="downloadCV"
@@ -22,7 +24,7 @@ import Imagen from "./Imagen.astro";
       >
         <span> Descargar mi CV</span>
         <object
-          data="src/assets/icons/downloadIcon.svg"
+          data="../assets/icons/downloadIcon.svg"
           type="image/svg+xml"
           class=""
           width="15px"></object>

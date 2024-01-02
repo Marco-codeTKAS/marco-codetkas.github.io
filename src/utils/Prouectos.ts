@@ -17,7 +17,7 @@ export const proyectos: Array<Proyectos> = [
     Este sistema me dio la oportunidad de aprender la ultima version de VueJs. Utilizando y aprendiendo conceptos como los composable.`,
     technologies: ["Quasar framework ", "Vue3", ".NetCore6"],
     image:{
-      src:"src/assets/images/Facturacion.png",
+      src:"../assets/images/Facturacion.png",
       alt:""
     },
     date:"Octubre-2023",
@@ -30,7 +30,7 @@ export const proyectos: Array<Proyectos> = [
     `,
     technologies: ["Quasar framework ", "VueJS", ".NetCore6"],
     image:{
-      src:"src/assets/images/Mailing.png",
+      src:"../assets/images/Mailing.png",
       alt:""
     },
     date:"Enero-2023",
@@ -42,7 +42,7 @@ export const proyectos: Array<Proyectos> = [
     Este sistema proporciona a los empleados de la empresa una para llevar a cabo diversas operaciones financieras.`,
     technologies: ["Quasar framework ", "VueJS", ".NetCore6"],
     image:{
-      src:"src/assets/images/Facturacion.png",
+      src:"../assets/images/Facturacion.png",
       alt:"Imagen de ejemplo extraída del proyecto Facturación.iloxtelecom.com"
     },
     date:"Septiembre-2022",

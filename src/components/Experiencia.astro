@@ -1,7 +1,12 @@
+---
+import { Image } from "astro:assets";
+import GyVImagen from "../assets/images/GyV.png"
+---
 <section class="flex flex-wrap ">
  <h5 class=" TextColor font-medium text-[25px] mb-4 ">Experiencia</h5>
  <div class="flex items-center gap-6 pt-[20px] pb-[40px]">
-  <img src="src/assets/images/GyV.png" class="flex" alt="">
+  <img src="../assets/icons/" class="flex" alt="">
+  <Image src={GyVImagen} alt="A bird." />
   <div class="flex flex-wrap gap-y-2">
     <span class="w-[100%] text-slate-400"> Sep, 2022  -  Hoy</span>
     <p class=" text-[15px] leading-5 font-normal ">GyV internacional es la empresa que me dio la bienvenida en mi carrera como desarrollador web. Recien egresado me encontre con retos muy impoirtantes los cuales fueron complicados de resolver y aun con eso logre cumplir las expectativas de los trabajos a los cuales fui asignado</p>
