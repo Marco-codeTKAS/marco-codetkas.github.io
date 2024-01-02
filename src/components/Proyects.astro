@@ -1,0 +1,28 @@
+---
+ import Card from "../components/Card.astro";
+ import Timeline from "./Timeline.astro";
+
+
+
+
+---
+<section class="flex flex-col relative flex-wrap mt-[80px]">
+  <h5 class="TextColor font-medium text-2xl mb-2 pb-[40px]"> Proyectos</h5>
+  <Timeline></Timeline>
+
+</section>
+<style>
+  #timeline{
+    position: relative;
+  }
+  #timeline:before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background-image: linear-gradient( to bottom, var(--accent-light) , var(--accent-regular));
+    left: 10%;
+    top: 0;
+    position: absolute;
+}
+
+</style>

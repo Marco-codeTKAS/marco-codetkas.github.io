@@ -1,0 +1,37 @@
+---
+  interface Props {
+	title: string;
+	body: string;
+	technologies: Array<string>;
+  class:Array<string>
+  }
+  const { technologies, title, body, class:ClassName } = Astro.props;
+---
+
+<div class={"border-wrapper mt-4 " + ClassName}>
+  <figure class={'w-[100%] bg-white p-4 '} >
+    <header>{title}</header>
+    <p>{body}</p>
+    <p>Tecnologiass: {technologies.map(technology => <span>{technology}</span>)}</p>
+  </figure>
+</div>
+<style>
+.timeline-content:before {
+  content: "";
+    position: absolute;
+    left: -1.88%;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid var(--accent-light);
+}
+.border-wrapper {
+  position: relative;
+  background: linear-gradient(to bottom, var(--accent-light), var(--accent-regular));
+  padding: 2px;
+
+}
+
+</style>
