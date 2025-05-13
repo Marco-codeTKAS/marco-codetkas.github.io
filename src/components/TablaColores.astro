@@ -1,0 +1,34 @@
+---
+import {colores} from '../utils/Colores.js';
+interface Props {
+  tipoColores: string;
+}
+const {tipoColores = "aUtilizar"} = Astro.props;
+
+const coloresFiltrados = colores[tipoColores];
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>NombreColor</th>
+      <th>Descripcion</th>
+      <th>Hexadecimal</th>
+    </tr>
+  </thead>
+  <tbody>
+    {coloresFiltrados.map((color) => (
+      <tr>
+        <td>{color.Nombre}</td>
+        <td>{color.descripcion}</td>
+        <td>{color.hex}</td>
+        <td>
+          <div
+            class="w-10 h-10"
+            style={`background-color: ${color.hex};`}
+          ></div>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>

@@ -1,0 +1,43 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<div class="flex flex-row w-full items-center justify-end">
+  <ul class="flex flex-row items-center justify-between">
+    <li class="flex flex-row">
+      <Icon
+        class=""
+        icon="Home"
+        viewBox="0 0 60 60"
+        size="40px"
+        urlTo="/AboutMe"
+        gradient
+        label="Home"
+      />
+    </li>
+    <li class="flex flex-row">
+      <Icon
+        class=""
+        icon="Phone"
+        viewBox="0 0 60 60"
+        size="40px"
+        urlTo="#"
+        gradient
+        label="About Me"
+      />
+    </li>
+    <li class="flex flex-row">
+      <a href="#">
+        <Icon
+          class=""
+          icon="User"
+          viewBox="0 0 60 60"
+          size="30px"
+          urlTo="#"
+          gradient
+          label="Contact"
+        />
+      </a>
+    </li>
+  </ul>
+</div>

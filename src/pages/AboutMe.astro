@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import TablaColores from "../components/TablaColores.astro";
+import { colores } from "../utils/Colores";
+---
+
+<Layout title="About Marco Antonio">
+  <main class="w-[1200px] sm:px-11 px-5 pb-11 bg-white">
+    <h5 class="text-2xl font-bold text-center m-5">
+      Este es mi paleta de colores basada en la colorimetria de mi piel. 
+    </h5>
+    <div class="flex flex-row flex-wrap justify-around gap-5">
+      <div class="flex w-[49%] flex-wrap">
+        <h4 class="">Estos son los colores que debo utilizar</h4>
+        <TablaColores tipoColores="aUtilizar" />
+      </div>
+      <div class="flex w-[49%] flex-wrap">
+        <h5> Estos son los colores que debo evitar </h5>
+        <TablaColores tipoColores="aEvitar" />
+      </div>
+      <div class="flex flex-wrap">
+          <h5 class="w-full text-xl font-bold">{ colores.combinaciones.titulo }</h5>
+          <h5 class="mb-8">{ colores.combinaciones.descripcion }</h5>
+          <div class="flex flex-wrap gap-5">
+            {colores.combinaciones.opciones.map((color) => (
+              <div class="flex flex-col items-center">
+                <h5 class="text-xl ">{color.descripcion}</h5>
+                <div class="flex">
+                  {color.hexCombinacion.map((hexval) => (
+                  <div
+                    class="w-10 h-10"
+                    style={`background-color: ${hexval};`}
+                  ></div>
+                ))}
+                </div> 
+                
+              </div>
+            ))}
+          </div>
+      </div>    
+    </div>
+    <Footer />
+  </main>
+</Layout>

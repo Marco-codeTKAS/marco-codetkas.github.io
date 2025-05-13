@@ -1,76 +1,122 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-import { iconPaths } from './iconPaths.ts';
+import type { HTMLAttributes } from "astro/types";
+import { iconPaths } from "./iconPaths.ts";
 
 interface Props {
-	icon: keyof typeof iconPaths;
-	color?: string;
-	gradient?: boolean;
-	size?: string;
-	urlTo:string;
-	class?: string;
+  icon: keyof typeof iconPaths;
+  color?: string;
+  gradient?: boolean;
+  viewBox?: string;
+  size?: string;
+  urlTo: string;
+  class?: string;
+  label?: string;
 }
 
-const { color = '#0000', gradient, icon, size, class:className, urlTo="#" } = Astro.props;
+const {
+  color = "#0000",
+  gradient,
+  icon,
+  size,
+  class: className,
+  urlTo = "#",
+  viewBox = "0 0 40 40",
+  label = "",
+} = Astro.props;
+
 const iconPath = iconPaths[icon];
-const sizeHover = (Number(size.match(/\d+/g)) + 5).toString()+"px"; 
+const sizeHover = (Number(size.match(/\d+/g)) + 5).toString() + "px";
 
+const attrs: HTMLAttributes<"svg"> = {};
 
+const inferTarget = label == "" ? "_blank" : "";
 
-const attrs: HTMLAttributes<'svg'> = {};
+const gradientId =
+  "icon-gradient-" + Math.round(Math.random() * 10e12).toString(36);
 
-const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString(36);
-
-if (size) attrs.style = { '--size': size,'--sizeHover': sizeHover, '--gradientId': `#${gradientId}` };
+if (size)
+  attrs.style = {
+    "--size": size,
+    "--sizeHover": sizeHover,
+    "--gradientId": `#${gradientId}`,
+  };
 ---
-<a href={urlTo} target="_blank">
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width="40"
-		height="40"
-		viewBox="0 0 40 40"
-		aria-hidden="true"
-		{...attrs}
-		class={className}
-	>
-	<defs>
-		<linearGradient
-		id="gradiente"
-		x1="0"
-		x2="0"
-		y1="0"
-		y2="30"
-		gradientUnits="userSpaceOnUse"
-	>
-			<stop stop-color="var(--gradient-stop-1)" style="stop-opacity:1;" />
-			<stop offset="1" stop-color="var(--gradient-stop-2)" style="stop-opacity: 1;" />
-		</linearGradient>
-	</defs>
-		<g set:html={iconPath} />
-				
-	</svg>
+
+<a
+  href={urlTo}
+  target={inferTarget}
+  class="flex flex-row items-center gap-1 px-2"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox={viewBox}
+    aria-hidden="true"
+    {...attrs}
+    class={className}
+  >
+    <defs>
+      <linearGradient
+        id="gradiente"
+        x1="0"
+        x2="0"
+        y1="0"
+        y2="30"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="var(--gradient-stop-1)" style="stop-opacity:1;"
+        ></stop>
+        <stop
+          offset="1"
+          stop-color="var(--gradient-stop-2)"
+          style="stop-opacity: 1;"></stop>
+      </linearGradient>
+    </defs>
+    <g set:html={iconPath} />
+  </svg>
+  <span>{label}</span>
 </a>
 
 <style>
-	svg {
-		vertical-align: middle;
-		width: var(--size, 1em);
-		height: var(--size, 1em);
-		transition: opacity 1s ease, transform 0.3s ease; ;
-		fill: var(--gray-disable);
-	}
-	svg:hover{
-		vertical-align: middle;
-		transform: scale(1.15);
-		transform: translate(2px, -2px);
-		fill: url(#gradiente);
-	}
-	svg g{
-		opacity: 0.4;
-		transition:  opacity .18s;
-	}
+  svg {
+    width: var(--size, 1em);
+    height: var(--size, 1em);
+    transition:
+      opacity 1s ease,
+      transform 0.3s ease;
+    fill: var(--gray-disable);
+    stroke: var(--gray-disable);
+  }
+  svg:hover {
+    transform: scale(1.15);
+    transform: translate(2px, -2px);
+    fill: url(#gradiente);
+    stroke: url(#gradiente);
+  }
+  svg g {
+    opacity: 0.4;
+    transition: opacity 0.15s;
+  }
+  span {
+    transition: font-size 0.13s ease;
+    font-weight: 500;
+  }
 
-	svg:hover g{
-		opacity: 1;
-	}
+  a:hover g {
+    opacity: 1;
+  }
+  a:hover span {
+    font-size: large;
+    font-weight: 500;
+    color: var(--accent-regular);
+    line-height: 5px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Grosor de la línea */
+    text-underline-offset: 6px;
+  }
+  a:hover svg {
+    transform: scale(1.15);
+    transform: translate(2px, -2px);
+    fill: url(#gradiente);
+    stroke: url(#gradiente);
+  }
 </style>
