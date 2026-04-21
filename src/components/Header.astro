@@ -7,7 +7,7 @@ import Menu from "./Menu.astro";
 ---
 
 <div
-  class="flex flex-row flex-wrap items-center pt-[120px] pb-[80px] gap-6 sm:gap-x-0 sm:gap-y-16 sm:py-[40px]"
+  class="flex flex-row flex-wrap items-center pt-[40px] pb-[40px] gap-6 sm:gap-x-0 sm:gap-y-16 sm:py-[40px]"
 >
   <!-- <Menu /> -->
   <section class="flex flex-wrap basis-3/6 justify-around items-center">
@@ -22,8 +22,8 @@ import Menu from "./Menu.astro";
       <div class="flex flex-row items-center gap-2 mt-6">
         <div class="flex gap-[40px]">
           <a
-            href="https://drive.google.com/file/d/1yqJzwNBrpY11U_yD2Tg2ONr84Vmc5zCI/view?usp=drive_link"
-            download
+            href="../assets/Doc/CV Marco Antonio Renteria Ramirez.pdf"
+            download="CV Marco Antonio Renteria Ramirez.pdf"
             target="_blank"
             id="downloadCV"
             class="flex button gap-3 px-3 py-2 text-sm shadow-sm font-normal text-white bg-gradient-to-r from-[#00519C] to-[#0AC5B9] rounded-[3px]"
@@ -96,33 +96,33 @@ import Menu from "./Menu.astro";
 
   <div
     id="imagenPersonal"
-    class="flex relative sm:gap-x-4 basis-3/6 sm:p-0 pr-[22px] flex-1 justify-center items-center h-[320px]"
+    class="flex relative sm:gap-x-4 basis-3/6 sm:p-0 pr-[22px] flex-1 justify-center items-center h-[310px]"
   >
     <Imagen />
-    <div class="icons h-[100%] w-10">
+    <div class="icons absolute  h-[80%] w-full">
       <Icon
-        class="absolute top-[10%] ml-4"
+        class="absolute top-[10%] left-0  ml-4"
         icon="Facebook"
         size="40px"
         urlTo="https://www.facebook.com/marco.tkas13"
         gradient
       />
       <Icon
-        class="absolute top-[32%] ml-12"
+        class="absolute top-[10%] right-0 ml-12"
         icon="github"
         size="40px"
         urlTo="https://github.com/Marco-codeTKAS"
         gradient
       />
       <Icon
-        class="absolute top-[57%] ml-12"
+        class="absolute top-[90%] right-0 ml-12"
         icon="instagram"
         size="40px"
         urlTo="https://www.instagram.com/marcoramirez2544/"
         gradient
       />
       <Icon
-        class="absolute top-[79%] ml-4"
+        class="absolute top-[90%] left-0 ml-4"
         icon="linkedin"
         size="40px"
         urlTo="https://www.linkedin.com/in/marco-antonio-rentería-ramírez-96032317a"

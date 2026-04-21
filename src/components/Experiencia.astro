@@ -1,20 +1,40 @@
 ---
 import { Image } from "astro:assets";
-import GyVImagen from "../assets/images/GyV.png"
+import GyVImagen from "../assets/images/1-LogTes8.png";
+
+const inicioCarrera = new Date("2022-09-01").getTime();
+const fechaActual = new Date().getTime();
+const yearsOfExperience = Math.floor(
+  (fechaActual - inicioCarrera) / (1000 * 60 * 60 * 24 * 365)
+);
 ---
+
 <section class="flex flex-wrap ">
- <h5 class=" TextColor font-medium text-[25px] mb-4 ">Experiencia</h5>
- <div class="flex items-center gap-6 pt-[20px] pb-[40px]">
-  <img src="../assets/icons/" class="flex" alt="">
-  <Image src={GyVImagen} alt="A bird." />
-  <div class="flex flex-wrap gap-y-2">
-    <span class="w-[100%] text-slate-400"> Sep, 2022  -  Hoy</span>
-    <p class=" text-[15px] leading-5 font-normal ">GyV internacional es la empresa que me dio la bienvenida en mi carrera como desarrollador web. Recien egresado me encontre con retos muy impoirtantes los cuales fueron complicados de resolver y aun con eso logre cumplir las expectativas de los trabajos a los cuales fui asignado</p>
-  </div>  
- </div>
- <div class="flex mt-10">
-  <p> Soy un apasionado desarrollador de software en la plataforma web con <strong> más de dos año </strong> de experiencia en la industria. Mi enfoque principal ha sido el desarrollo utilizando tecnologías como <strong>Vue.js</strong>, <strong>.NetCore</strong> y <strong>SQL Server</strong>. A lo largo de mi carrera, he sido capaz de tomar requerimientos y <strong>ofrecer soluciones a las problematicas</strong> de manera eficiente y escalable</p>
- </div>
+  <h5 class="TextColor font-medium text-[25px] mb-4">Experiencia</h5>
+  <div class="flex items-center gap-6 pt-[20px] pb-[40px] bg-gray-100 text-gray-800">
+    <div class="imagen-wrapper">      
+      <Image src={GyVImagen} alt="A bird." class="bg-blue-950 rounded-sm px-2" />
+    </div>
+    <div class="flex flex-wrap gap-y-2">
+      <span class="w-[100%] text-slate-400"> Sep, 2022 - Hoy</span>
+      <p class="text-[15px] leading-5 font-normal">
+        Tesla Comunicaciones es la empresa que me dio la bienvenida en mi carrera
+        como desarrollador web. Recién egresado me encontré con retos muy
+        importantes los cuales fueron complicados de resolver y aun con eso
+        logre cumplir las expectativas de los trabajos a los cuales fui asignado
+      </p>
+    </div>
+  </div>
+  <div class="flex mt-10">
+    <p>
+      Desarrollador WEB con 
+      <strong> más de {yearsOfExperience} años </strong> de experiencia en la industria. Mi enfoque principal ha sido el desarrollo
+      utilizando tecnologías como <strong>Vue.js</strong>, <strong
+        >.NetCore</strong
+      > y <strong>SQL Server</strong>. A lo largo de mi carrera, he sido capaz
+      de tomar requerimientos y <strong
+        >ofrecer soluciones a las problemáticas</strong
+      > de manera eficiente y escalable. He trabajado en proyectos de diversa índole, desde aplicaciones web hasta sistemas de gestión, siempre buscando la mejor manera de resolver los desafíos técnicos y cumplir con las expectativas del
+    </p>
+  </div>
 </section>
-
-
